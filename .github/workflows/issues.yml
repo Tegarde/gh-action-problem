@@ -1,0 +1,11 @@
+name: Issues Workflow
+on: issues
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Issue Info
+        run: |
+          echo "Issue Number: ${{ github.event.issue.number }}"
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Body: ${{ github.event.issue.body }}"
