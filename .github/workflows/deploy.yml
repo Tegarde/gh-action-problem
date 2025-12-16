@@ -6,14 +6,13 @@ on:
       - dev
 env:
   MONGODB_DB_NAME: events
-
+  MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+  MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
 jobs:
   test:
     env:
       PORT: 8080
       MONGODB_CLUSTER_ADDRESS: tegarde.6oqhryv.mongodb.net
-      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     environment: testing
     runs-on: ubuntu-latest
     steps:
