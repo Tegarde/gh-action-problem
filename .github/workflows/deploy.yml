@@ -4,8 +4,16 @@ on:
     branches:
       - main
       - dev
+env:
+  MONGODB_DB_NAME: events
+
 jobs:
   test:
+    env:
+      PORT: 8080
+      MONGODB_CLUSTER_ADDRESS: tegarde.6oqhryv.mongodb.net
+      MONGODB_USERNAME: brunooliveira19945_db_user
+      MONGODB_PASSWORD: 591nRLbBZThNRr9P
     environment: testing
     runs-on: ubuntu-latest
     steps:
