@@ -25,6 +25,7 @@ jobs:
       - name: Test
         run: npm run test
   build:
+    needs: test
     runs-on: ubuntu-latest
     outputs:
       script-file: ${{ steps.publish.outputs.script-file }}
@@ -69,6 +70,6 @@ jobs:
 
       - name: Show content
         run: ls
-        
+
       - name: Output filename
         run: echo "${{ needs.build.outputs.script-file }}"
