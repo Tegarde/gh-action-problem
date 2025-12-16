@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      script-file: $ {{ steps.publish.outputs.script-file }}
+      script-file: ${{ steps.publish.outputs.script-file }}
     steps:
       - name: Output event info
         run: echo "${{ toJSON(github.event) }}"
