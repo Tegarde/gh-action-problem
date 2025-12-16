@@ -12,8 +12,8 @@ jobs:
     env:
       PORT: 8080
       MONGODB_CLUSTER_ADDRESS: tegarde.6oqhryv.mongodb.net
-      MONGODB_USERNAME: brunooliveira19945_db_user
-      MONGODB_PASSWORD: 591nRLbBZThNRr9P
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     environment: testing
     runs-on: ubuntu-latest
     steps:
